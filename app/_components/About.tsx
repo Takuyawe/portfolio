@@ -4,7 +4,7 @@ import Image from "next/image";
 const About = () => {
   return (
     <div className="h-screen w-full bg-gray-100">
-      <div className="h-1/3 flex flex-col items-center justify-center">
+      <div className="pt-12 flex flex-col items-center justify-center">
         <Typography variant="h3" fontWeight={500}>
           ABOUT ME
         </Typography>

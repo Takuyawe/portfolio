@@ -3,14 +3,16 @@ import Image from "next/image";
 
 const Profile = () => {
   return (
-    <div className="h-screen w-full overflow-hidden flex justify-center">
-      <Image
+    <div className="relative h-screen w-full overflow-hidden flex justify-center">
+      <div className="absolute inset-0">
+        <Image
         src="/background-profile.jpg"
         alt="Profile"
         fill
         objectFit="cover"
       />
-      <div className="absolute top-1/2 flex flex-col items-center">
+      </div>
+      <div className="absolute z-10 top-1/2 flex flex-col items-center">
         <Typography variant="h2" fontWeight={900}>
           Hey, I&apos;m Takuya Nemoto
         </Typography>
