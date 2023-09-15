@@ -6,7 +6,7 @@ const Profile = () => {
     <div className="relative h-screen w-full overflow-hidden flex justify-center">
       <div className="absolute inset-0">
         <Image
-          src="/background-profile.jpg"
+          src="/background-white.jpg"
           alt="Profile"
           fill
           objectFit="cover"
@@ -21,7 +21,13 @@ const Profile = () => {
           <br />
           Looking for a new opportunity to contribute to other projects.
         </Typography>
-        <Button color="primary" variant="contained">Projects</Button>
+        <Button
+          className="bg-blue-600 hover:bg-blue-500"
+          size="large"
+          variant="contained"
+        >
+          Projects
+        </Button>
       </div>
     </div>
   );

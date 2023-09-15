@@ -10,7 +10,7 @@ const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          backgroundColor: "#2EEC00",
+          backgroundColor: "#0070FF",
           fontFamily: "Roboto, sans-serif",
         },
       },
@@ -25,7 +25,7 @@ const theme = createTheme({
     MuiDivider: {
       styleOverrides: {
         root: {
-          backgroundColor: "#00AE2F",
+          backgroundColor: "#0070FF",
           height: "0.5rem",
           width: "3rem",
           borderRadius: "10px",

@@ -11,34 +11,54 @@ const About = () => {
         <Divider flexItem className="self-center" />
         <Typography variant="h6" fontWeight={300}>
           You will find more information about me in this section.
-          <br />
-          I have sufficient knowledge to work as a full stack developer.
+          <br />I have sufficient knowledge to work as a full stack developer.
         </Typography>
       </div>
       <div className="h-2/3 flex items-center">
         <Grid container>
-          <Grid item sm={6} className="h-96 flex flex-col items-center justify-around">
+          <Grid
+            item
+            sm={6}
+            className="h-96 flex flex-col items-center justify-around"
+          >
             <Typography variant="h4" fontWeight={600}>
-              My story
+              My Introduction
             </Typography>
             <div className="w-3/4">
-               <Typography variant="subtitle1" fontWeight={300}>
-                In my role as a full-stack JavaScript developer, I navigate the complex landscapes of both front and backend development with ease. My hands-on experience with JavaScript has armed me with the knowledge and expertise to engineer seamless web applications that speak to users&apos; needs and expectations. I pride myself on being a problem-solver, always ready to tackle challenges with a positive and analytical approach. My goal is to continue evolving in my field, developing solutions that are not just functional, but innovative, secure, and scalable.
+              <Typography variant="subtitle1" fontWeight={300}>
+                In my role as a full-stack JavaScript developer, I navigate the
+                complex landscapes of both front and backend development with
+                ease. My hands-on experience with JavaScript has armed me with
+                the knowledge and expertise to engineer seamless web
+                applications that speak to users&apos; needs and expectations. I
+                pride myself on being a problem-solver, always ready to tackle
+                challenges with a positive and analytical approach. My goal is
+                to continue evolving in my field, developing solutions that are
+                not just functional, but innovative, secure, and scalable.
               </Typography>
             </div>
-            <Button variant="contained">Contact</Button>
+            <Button
+              className="bg-blue-600 hover:bg-blue-500"
+              variant="contained"
+            >
+              Contact
+            </Button>
           </Grid>
-          <Grid item sm={6} className="flex flex-col items-center justify-around">
+          <Grid
+            item
+            sm={6}
+            className="flex flex-col items-center justify-around"
+          >
             <Typography variant="h4" fontWeight={600}>
               My Skills
             </Typography>
             <div className="flex flex-col items-center">
-              <div className="shadow-md bg-green-100 py-2 px-4 rounded-2xl mb-4">
+              <div className="shadow-md bg-blue-100 py-2 px-4 rounded-2xl mb-4">
                 <Typography variant="h6" fontWeight={400}>
                   Languages & Frameworks
                 </Typography>
               </div>
-              
+
               <div className="flex">
                 <Image
                   src="/about/html5.svg"
@@ -81,9 +101,9 @@ const About = () => {
               </div>
             </div>
             <div className="flex flex-col items-center">
-              <div className="shadow-md bg-green-100 py-2 px-4 rounded-2xl mb-4">
+              <div className="shadow-md bg-blue-100 py-2 px-4 rounded-2xl mb-4">
                 <Typography variant="h6" fontWeight={400}>
-                  Development Tools:{" "}
+                  Development Tools
                 </Typography>
               </div>
               <div className="flex">
