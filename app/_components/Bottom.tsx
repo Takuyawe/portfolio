@@ -6,7 +6,7 @@ const Bottom = () => {
   return (
     <div className="h-[40vh] bg-black flex flex-col justify-around">
       <div className="flex justify-around">
-        <div className="flex flex-col items-center justify-around">
+        <div className="h-24 flex flex-col items-center justify-around">
           <Typography className="text-white" variant="h5">Takuya Nemoto</Typography>
           <Typography className="text-white" variant="subtitle1">
             A full stack developer who loves to code and learn new things.
@@ -14,14 +14,14 @@ const Bottom = () => {
             Looking for a new opportunity to contribute to other projects.
           </Typography>
         </div>
-        <div className="flex flex-col items-center justify-center">
+        <div className="h-24 flex flex-col items-center justify-around">
           <Typography className="text-white" variant="h6">SOCIAL</Typography>
           <div className="flex items-center justify-center">
-            <IconButton className="bg-white">
-              <LinkedInIcon />
+            <IconButton className="bg-white hover:bg-gray-200 mr-2">
+              <LinkedInIcon className="text-blue-400" />
             </IconButton>
-            <IconButton className="bg-white">
-              <GitHubIcon />
+            <IconButton className="bg-white hover:bg-gray-200">
+              <GitHubIcon className="text-gray-600" />
             </IconButton>
           </div>
         </div>
