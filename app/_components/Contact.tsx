@@ -23,16 +23,18 @@ const Contact = () => {
             objectFit="cover"
         />
       </div>
-      <div className="absolute z-10 top-12 flex flex-col items-center justify-center">
+      <div className="absolute z-10 pt-12 h-64 flex flex-col items-center justify-around">
         <Typography variant="h3" fontWeight={500}>
           CONTACT
         </Typography>
         <Divider flexItem className="self-center" />
         <Typography variant="h6" fontWeight={300}>
-            Feel free to Contact me by submitting the form below and I will get back to you as soon as possible
+            You can contact me by filling the contact form below.
+            <br />
+            Looking forward to your message!
         </Typography>
       </div>
-      <div className="absolute top-1/4 h-[40rem] w-[40rem] bg-white rounded-md shadow-md">
+      <div className="absolute top-[30%] h-[40rem] w-[40rem] bg-white rounded-md shadow-md">
       <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
         <div className="flex flex-col mx-8">
             <Typography className="mt-4 self-start" variant="subtitle1">Name</Typography>

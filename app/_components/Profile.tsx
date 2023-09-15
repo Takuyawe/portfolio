@@ -6,21 +6,22 @@ const Profile = () => {
     <div className="relative h-screen w-full overflow-hidden flex justify-center">
       <div className="absolute inset-0">
         <Image
-        src="/background-profile.jpg"
-        alt="Profile"
-        fill
-        objectFit="cover"
-      />
+          src="/background-profile.jpg"
+          alt="Profile"
+          fill
+          objectFit="cover"
+        />
       </div>
-      <div className="absolute z-10 top-1/2 flex flex-col items-center">
+      <div className="absolute z-10 top-1/3 h-72 flex flex-col items-center justify-around">
         <Typography variant="h2" fontWeight={900}>
           Hey, I&apos;m Takuya Nemoto
         </Typography>
         <Typography variant="h5" fontWeight={400}>
-          A Frontend focused Web Developer building the Frontend of Websites and
-          Web Applications that leads to the success of the overall product
+          A full stack developer who loves to code and learn new things.
+          <br />
+          Looking for a new opportunity to contribute to other projects.
         </Typography>
-        <Button variant="contained">Projects</Button>
+        <Button color="primary" variant="contained">Projects</Button>
       </div>
     </div>
   );

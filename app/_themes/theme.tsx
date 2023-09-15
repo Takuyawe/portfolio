@@ -10,6 +10,7 @@ const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
+          backgroundColor: "#2EEC00",
           fontFamily: "Roboto, sans-serif",
         },
       },
