@@ -37,12 +37,14 @@ const About = () => {
                 not just functional, but innovative, secure, and scalable.
               </Typography>
             </div>
-            <Button
-              className="bg-blue-600 hover:bg-blue-500"
-              variant="contained"
-            >
-              Contact
-            </Button>
+            <a href="#contact">
+              <Button
+                className="bg-blue-600 hover:bg-blue-500"
+                variant="contained"
+              >
+                Contact
+              </Button>
+            </a>
           </Grid>
           <Grid
             item

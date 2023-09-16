@@ -21,13 +21,15 @@ const Profile = () => {
           <br />
           Looking for a new opportunity to contribute to other projects.
         </Typography>
-        <Button
-          className="bg-blue-600 hover:bg-blue-500"
-          size="large"
-          variant="contained"
-        >
-          Projects
-        </Button>
+        <a href="#projects">
+          <Button
+            className="bg-blue-600 hover:bg-blue-500"
+            size="large"
+            variant="contained"
+          >
+            Projects
+          </Button>
+        </a>
       </div>
     </div>
   );

@@ -36,11 +36,13 @@ const Projects = () => {
               Food WebGIS
             </Typography>
             <Typography variant="h5" fontWeight={300}>
-              Food WebGIS is a web application that allows users to search for restaurants in any area of the world.
+              Food WebGIS is a web application that allows users to search for
+              restaurants in any area of the world.
               <br />
               Users can also check the weather around the searched location.
               <br />
-              It is built using Next.js and different kinds of APIs, such as Google Maps API, OpenWeather API, and Yelp API.
+              It is built using Next.js and different kinds of APIs, such as
+              Google Maps API, OpenWeather API, and Yelp API.
             </Typography>
           </Grid>
         </Grid>
@@ -50,7 +52,7 @@ const Projects = () => {
           <Grid item xs={6}>
             <div className="self-center">
               <Image
-                src="/projects/project-1.svg"
+                src="/projects/project-2.svg"
                 alt="project-1"
                 height={400}
                 width={600}
@@ -66,11 +68,13 @@ const Projects = () => {
               Card Deck
             </Typography>
             <Typography variant="h5" fontWeight={300}>
-              Card Deck is a simple card deck that allows users to control each card on the board.
+              Card Deck is a simple card deck that allows users to control each
+              card on the board.
               <br />
               Users can create a room and invite other players to join the room.
               <br />
-              The room state can be stored in a database, and can be accessed with crendentials.
+              The room state can be stored in a database, and can be accessed
+              with crendentials.
               <br />
               It is built using Next.js, MongoDB, WebSocket, and so on.
             </Typography>

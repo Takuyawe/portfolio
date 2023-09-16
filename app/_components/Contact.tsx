@@ -48,7 +48,6 @@ const Contact = () => {
               label="Enter your name"
               name="name"
               autoComplete="name"
-              autoFocus
             />
             <Typography className="mt-4 self-start" variant="subtitle1">
               Email
@@ -63,7 +62,6 @@ const Contact = () => {
               label="Enter your email"
               name="email"
               autoComplete="email"
-              autoFocus
             />
             <Typography className="mt-4 self-start" variant="subtitle1">
               Message
@@ -80,7 +78,6 @@ const Contact = () => {
               label="Enter your message"
               name="message"
               autoComplete="message"
-              autoFocus
             />
             <Button
               className="self-end mt-4 w-24 bg-blue-600 hover:bg-blue-500"

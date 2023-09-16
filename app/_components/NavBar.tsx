@@ -6,7 +6,6 @@ import {
   IconButton,
   Button,
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
 import Image from "next/image";
 
