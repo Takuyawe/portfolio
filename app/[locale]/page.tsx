@@ -1,6 +1,5 @@
 "use client";
 
-import { appWithTranslation } from "next-i18next";
 import NavBar from "@/app/_components/NavBar";
 import Profile from "@/app/_components/Profile";
 import About from "@/app/_components/About";
@@ -31,4 +30,4 @@ const Home = () => {
   );
 };
 
-export default appWithTranslation(Home);
+export default Home;
