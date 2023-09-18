@@ -1,7 +1,10 @@
 import { Typography, Divider, Grid } from "@mui/material";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const Projects = () => {
+  const t = useTranslations("Projects");
+
   return (
     <div className="min-h-screen w-full bg-white pb-24">
       <div className="h-64 pt-12 flex flex-col items-center justify-around mb-12">
@@ -10,9 +13,9 @@ const Projects = () => {
         </Typography>
         <Divider flexItem className="self-center" />
         <Typography variant="h6" fontWeight={300}>
-          These are my projects that I have worked on.
-          <br />
-          Currently I am working on another project which will appear here soon.
+          {t.rich("subtitle", {
+            br: () => <br />,
+          })}
         </Typography>
       </div>
       <div className="flex items-center ml-8 mb-20">
@@ -36,13 +39,9 @@ const Projects = () => {
               Food WebGIS
             </Typography>
             <Typography variant="h5" fontWeight={300}>
-              Food WebGIS is a web application that allows users to search for
-              restaurants in any area of the world.
-              <br />
-              Users can also check the weather around the searched location.
-              <br />
-              It is built using Next.js and different kinds of APIs, such as
-              Google Maps API, OpenWeather API, and Yelp API.
+              {t.rich("project1", {
+                br: () => <br />,
+              })}
             </Typography>
           </Grid>
         </Grid>
@@ -68,15 +67,9 @@ const Projects = () => {
               Card Deck
             </Typography>
             <Typography variant="h5" fontWeight={300}>
-              Card Deck is a simple card deck that allows users to control each
-              card on the board.
-              <br />
-              Users can create a room and invite other players to join the room.
-              <br />
-              The room state can be stored in a database, and can be accessed
-              with crendentials.
-              <br />
-              It is built using Next.js, MongoDB, WebSocket, and so on.
+              {t.rich("project2", {
+                br: () => <br />,
+              })}
             </Typography>
           </Grid>
         </Grid>

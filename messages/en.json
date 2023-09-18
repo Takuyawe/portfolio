@@ -1,0 +1,33 @@
+{
+  "NavBar": {
+    "name": "Takuya Nemoto"
+  },
+  "Profile": {
+    "title": "Hey, I'm Takuya Nemoto",
+    "description": "A full stack developer who loves to code and learn new things. <br></br> Looking for a new opportunity to contribute to new projects."
+  },
+  "About": {
+    "subtitle": "You will find more information about me in this section. <br></br> I have sufficient knowledge to work as a full stack developer.",
+    "introduction": "Throughout my career as an engineer, I have worked on two significant projects. The first one was a machine learning project where I primarily utilized Python to develop a product handling image classification and object detection. In the second project, I have been involved in developing a web application leveraging GIS data using React.js, a JavaScript framework.<br></br>Looking ahead, I aspire to become a full-stack engineer capable of handling both front-end and back-end development while honing my existing skills.",
+    "nav1": "Languages & Frameworks",
+    "nav2": "Development Tools"
+  },
+  "Projects": {
+    "subtitle": "These are my projects that I have worked on. <br></br> Currently I am working on another project which will appear here soon.",
+    "project1": "Food WebGIS is a web application that allows users to search for restaurants in any area of the world. <br></br> Users can also check the weather around the searched location. <br></br> It is built using Next.js and different kinds of APIs, such as Google Maps API, OpenWeather API, and Yelp API.",
+    "project2": "Card Deck is a simple card deck that allows users to control each card on the board. <br></br> Users can create a room and invite other players to join the room. <br></br> The room state can be stored in a database, and can be accessed with crendentials. <br></br> It is built using Next.js, MongoDB, WebSocket, and so on."
+  },
+  "Contact": {
+    "subtitle": "You can contact me by filling the contact form below. <br></br> Looking forward to your message!",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "placeholder1": "Enter your name",
+    "placeholder2": "Enter your email",
+    "placeholder3": "Enter your message"
+  },
+  "Bottom": {
+    "name": "Takuya Nemoto",
+    "subtitle": "A full stack developer who loves to code and learn new things. <br></br> Looking for a new opportunity to contribute to other projects."
+  }
+}

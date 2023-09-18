@@ -8,8 +8,11 @@ import {
 } from "@mui/material";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const NavBar = () => {
+  const t = useTranslations("NavBar");
+
   return (
     <Box>
       <AppBar className="bg-white" position="fixed">
@@ -19,7 +22,7 @@ const NavBar = () => {
               <Image src="/selfie4.png" alt="selfie" height={40} width={40} />
             </div>
             <Typography className="text-gray-950" variant="h6">
-              Takuya Nemoto
+              {t("name")}
             </Typography>
           </div>
           <div className="flex w-1/3 justify-around">

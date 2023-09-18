@@ -1,19 +1,22 @@
 import { Typography, IconButton, Divider } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { useTranslations } from "next-intl";
 
 const Bottom = () => {
+  const t = useTranslations("Bottom");
+
   return (
     <div className="h-[40vh] bg-black flex flex-col justify-around">
       <div className="flex justify-around">
         <div className="h-24 flex flex-col items-center justify-around">
           <Typography className="text-white" variant="h5">
-            Takuya Nemoto
+            {t("name")}
           </Typography>
           <Typography className="text-white" variant="subtitle1">
-            A full stack developer who loves to code and learn new things.
-            <br />
-            Looking for a new opportunity to contribute to other projects.
+            {t.rich("subtitle", {
+              br: () => <br />,
+            })}
           </Typography>
         </div>
         <div className="h-24 flex flex-col items-center justify-around">

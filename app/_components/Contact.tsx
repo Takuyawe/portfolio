@@ -3,11 +3,14 @@
 import { Typography, Divider, Button, Box, TextField } from "@mui/material";
 import Image from "next/image";
 import { useRef } from "react";
+import { useTranslations } from "next-intl";
 
 const Contact = () => {
   const nameRef = useRef();
   const emailRef = useRef();
   const messageRef = useRef();
+
+  const t = useTranslations("Contact");
 
   const handleSubmit = () => {};
 
@@ -27,16 +30,16 @@ const Contact = () => {
         </Typography>
         <Divider flexItem className="self-center" />
         <Typography variant="h6" fontWeight={300}>
-          You can contact me by filling the contact form below.
-          <br />
-          Looking forward to your message!
+          {t.rich("subtitle", {
+            br: () => <br />,
+          })}
         </Typography>
       </div>
       <div className="absolute top-[30%] h-[40rem] w-[40rem] bg-white rounded-md shadow-md">
         <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
           <div className="flex flex-col mx-8">
             <Typography className="mt-4 self-start" variant="subtitle1">
-              Name
+              {t("name")}
             </Typography>
             <TextField
               className="mt-0"
@@ -45,12 +48,12 @@ const Contact = () => {
               required
               fullWidth
               id="name"
-              label="Enter your name"
+              label={t("placeholder1")}
               name="name"
               autoComplete="name"
             />
             <Typography className="mt-4 self-start" variant="subtitle1">
-              Email
+              {t("email")}
             </Typography>
             <TextField
               className="mt-0"
@@ -59,12 +62,12 @@ const Contact = () => {
               required
               fullWidth
               id="email"
-              label="Enter your email"
+              label={t("placeholder2")}
               name="email"
               autoComplete="email"
             />
             <Typography className="mt-4 self-start" variant="subtitle1">
-              Message
+              {t("message")}
             </Typography>
             <TextField
               className="mt-0"
@@ -75,7 +78,7 @@ const Contact = () => {
               multiline
               rows={10}
               id="message"
-              label="Enter your message"
+              label={t("placeholder3")}
               name="message"
               autoComplete="message"
             />

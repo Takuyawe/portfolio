@@ -1,7 +1,10 @@
 import { Typography, Divider, Grid, Button } from "@mui/material";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const About = () => {
+  const t = useTranslations("About");
+
   return (
     <div className="h-screen w-full bg-gray-100">
       <div className="h-64 pt-12 flex flex-col items-center justify-around">
@@ -10,8 +13,9 @@ const About = () => {
         </Typography>
         <Divider flexItem className="self-center" />
         <Typography variant="h6" fontWeight={300}>
-          You will find more information about me in this section.
-          <br />I have sufficient knowledge to work as a full stack developer.
+          {t.rich("subtitle", {
+            br: () => <br />,
+          })}
         </Typography>
       </div>
       <div className="h-2/3 flex items-center">
@@ -26,15 +30,9 @@ const About = () => {
             </Typography>
             <div className="w-3/4">
               <Typography variant="subtitle1" fontWeight={300}>
-                In my role as a full-stack JavaScript developer, I navigate the
-                complex landscapes of both front and backend development with
-                ease. My hands-on experience with JavaScript has armed me with
-                the knowledge and expertise to engineer seamless web
-                applications that speak to users&apos; needs and expectations. I
-                pride myself on being a problem-solver, always ready to tackle
-                challenges with a positive and analytical approach. My goal is
-                to continue evolving in my field, developing solutions that are
-                not just functional, but innovative, secure, and scalable.
+                {t.rich("introduction", {
+                  br: () => <br />,
+                })}
               </Typography>
             </div>
             <a href="#contact">
@@ -57,7 +55,7 @@ const About = () => {
             <div className="flex flex-col items-center">
               <div className="shadow-md bg-blue-100 py-2 px-4 rounded-2xl mb-4">
                 <Typography variant="h6" fontWeight={400}>
-                  Languages & Frameworks
+                  {t("nav1")}
                 </Typography>
               </div>
 
@@ -105,7 +103,7 @@ const About = () => {
             <div className="flex flex-col items-center">
               <div className="shadow-md bg-blue-100 py-2 px-4 rounded-2xl mb-4">
                 <Typography variant="h6" fontWeight={400}>
-                  Development Tools
+                  {t("nav2")}
                 </Typography>
               </div>
               <div className="flex">
