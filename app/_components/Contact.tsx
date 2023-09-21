@@ -4,6 +4,7 @@ import { Typography, Divider, Button, Box, TextField } from "@mui/material";
 import Image from "next/image";
 import { useRef } from "react";
 import { useTranslations } from "next-intl";
+import { useMediaQuery } from "react-responsive";
 
 const Contact = () => {
   const nameRef = useRef();
@@ -11,6 +12,10 @@ const Contact = () => {
   const messageRef = useRef();
 
   const t = useTranslations("Contact");
+
+  const isDesktopScreen = useMediaQuery({
+    query: "(min-width: 1024px)",
+  });
 
   const handleSubmit = () => {};
 
@@ -25,20 +30,20 @@ const Contact = () => {
         />
       </div>
       <div className="absolute z-10 pt-12 h-64 flex flex-col items-center justify-around">
-        <Typography variant="h3" fontWeight={500}>
+        <Typography className="text-3xl lg:text-5xl" fontWeight={500}>
           CONTACT
         </Typography>
         <Divider flexItem className="self-center" />
-        <Typography variant="h6" fontWeight={300}>
+        <Typography className="text-center text-sm lg:text-xl" fontWeight={300}>
           {t.rich("subtitle", {
             br: () => <br />,
           })}
         </Typography>
       </div>
-      <div className="absolute top-[30%] h-[40rem] w-[40rem] bg-white rounded-md shadow-md">
+      <div className="absolute top-[30%] h-[35rem] w-96 lg:h-[40rem] lg:w-[40rem] bg-white rounded-md shadow-md">
         <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
           <div className="flex flex-col mx-8">
-            <Typography className="mt-4 self-start" variant="subtitle1">
+            <Typography className="mt-4 mb-2 self-start text-xs lg:text-base">
               {t("name")}
             </Typography>
             <TextField
@@ -51,8 +56,9 @@ const Contact = () => {
               label={t("placeholder1")}
               name="name"
               autoComplete="name"
+              size={`${isDesktopScreen ? "medium" : "small"}`}
             />
-            <Typography className="mt-4 self-start" variant="subtitle1">
+            <Typography className="mt-4 mb-2 self-start text-xs lg:text-base">
               {t("email")}
             </Typography>
             <TextField
@@ -65,8 +71,9 @@ const Contact = () => {
               label={t("placeholder2")}
               name="email"
               autoComplete="email"
+              size={`${isDesktopScreen ? "medium" : "small"}`}
             />
-            <Typography className="mt-4 self-start" variant="subtitle1">
+            <Typography className="mt-4 mb-2 self-start text-xs lg:text-base">
               {t("message")}
             </Typography>
             <TextField
@@ -81,12 +88,14 @@ const Contact = () => {
               label={t("placeholder3")}
               name="message"
               autoComplete="message"
+              size={`${isDesktopScreen ? "medium" : "small"}`}
             />
             <Button
               className="self-end mt-4 w-24 bg-blue-600 hover:bg-blue-500"
               type="submit"
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
+              size={`${isDesktopScreen ? "medium" : "small"}`}
             >
               Submit
             </Button>
