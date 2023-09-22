@@ -71,7 +71,6 @@ const About = () => {
               <Button
                 className="bg-blue-600 hover:bg-blue-500"
                 variant="contained"
-                size={`${isDesktopScreen ? "medium" : "small"}`}
               >
                 Contact
               </Button>

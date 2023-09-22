@@ -40,7 +40,7 @@ const Contact = () => {
           })}
         </Typography>
       </div>
-      <div className="absolute top-[30%] h-[35rem] w-96 lg:h-[40rem] lg:w-[40rem] bg-white rounded-md shadow-md">
+      <div className="absolute top-[30%] w-96 h-[40rem] lg:w-[40rem] bg-white rounded-md shadow-md">
         <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
           <div className="flex flex-col mx-8">
             <Typography className="mt-4 mb-2 self-start text-xs lg:text-base">
@@ -56,7 +56,6 @@ const Contact = () => {
               label={t("placeholder1")}
               name="name"
               autoComplete="name"
-              size={`${isDesktopScreen ? "medium" : "small"}`}
             />
             <Typography className="mt-4 mb-2 self-start text-xs lg:text-base">
               {t("email")}
@@ -71,7 +70,6 @@ const Contact = () => {
               label={t("placeholder2")}
               name="email"
               autoComplete="email"
-              size={`${isDesktopScreen ? "medium" : "small"}`}
             />
             <Typography className="mt-4 mb-2 self-start text-xs lg:text-base">
               {t("message")}
@@ -88,14 +86,12 @@ const Contact = () => {
               label={t("placeholder3")}
               name="message"
               autoComplete="message"
-              size={`${isDesktopScreen ? "medium" : "small"}`}
             />
             <Button
               className="self-end mt-4 w-24 bg-blue-600 hover:bg-blue-500"
               type="submit"
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-              size={`${isDesktopScreen ? "medium" : "small"}`}
             >
               Submit
             </Button>

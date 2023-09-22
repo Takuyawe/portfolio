@@ -35,10 +35,7 @@ const Bottom = () => {
               rel="noopener noreferrer"
             >
               <IconButton className="bg-white hover:bg-gray-200 mr-2">
-                <LinkedInIcon
-                  className="text-blue-400"
-                  fontSize={`${isDesktopScreen ? "medium" : "small"}`}
-                />
+                <LinkedInIcon className="text-blue-400" />
               </IconButton>
             </a>
             <a
@@ -47,10 +44,7 @@ const Bottom = () => {
               rel="noopener noreferrer"
             >
               <IconButton className="bg-white hover:bg-gray-200">
-                <GitHubIcon
-                  className="text-gray-600"
-                  fontSize={`${isDesktopScreen ? "medium" : "small"}`}
-                />
+                <GitHubIcon className="text-gray-600" />
               </IconButton>
             </a>
           </div>
