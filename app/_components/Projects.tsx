@@ -121,7 +121,7 @@ const Projects = () => {
             item
             sm={10}
             md={5}
-            className="flex flex-col items-center justify-around lg:mr-4"
+            className="flex flex-col items-center justify-around mr-4"
           >
             {!isMobileScreen && (
               <Typography className="text-3xl lg:text-5xl" fontWeight={600}>
