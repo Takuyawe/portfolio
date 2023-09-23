@@ -45,7 +45,10 @@ const Projects = () => {
           Projects
         </Typography>
         <Divider flexItem className="self-center" />
-        <Typography className="text-center text-sm lg:text-xl" fontWeight={300}>
+        <Typography
+          className="w-3/4 text-center text-sm lg:text-xl"
+          fontWeight={300}
+        >
           {t.rich("subtitle", {
             br: () => <br />,
           })}
@@ -83,7 +86,10 @@ const Projects = () => {
               </Typography>
             )}
 
-            <Typography className="text-lg lg:text-2xl" fontWeight={300}>
+            <Typography
+              className="mt-8 lg:mt-0 text-base lg:text-2xl"
+              fontWeight={300}
+            >
               {t.rich("project1", {
                 br: () => <br />,
               })}
@@ -122,7 +128,10 @@ const Projects = () => {
                 Card Deck
               </Typography>
             )}
-            <Typography className="text-lg lg:text-2xl" fontWeight={300}>
+            <Typography
+              className="mt-8 lg:mt-0 text-base lg:text-2xl"
+              fontWeight={300}
+            >
               {t.rich("project2", {
                 br: () => <br />,
               })}
