@@ -46,7 +46,7 @@ const Projects = () => {
         </Typography>
         <Divider flexItem className="self-center" />
         <Typography
-          className="w-3/4 text-center text-sm lg:text-xl"
+          className="w-3/4 lg:w-full text-center text-sm lg:text-xl"
           fontWeight={300}
         >
           {t.rich("subtitle", {
