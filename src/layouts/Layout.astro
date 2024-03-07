@@ -1,4 +1,7 @@
 ---
+import "../styles/global.css"
+import {Icon} from "astro-icon/components"
+
 interface Props {
 	title: string;
 }
@@ -17,6 +20,13 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<div class="fixed top-12 left-12 h-12 text-gray-100 text-3xl">TAKUYA</div>
+    	<div class="hover:bg-gray-100 rounded-md fixed top-10 right-12 h-12 w-32 outline outline-1 outline-gray-100 flex items-center justify-center">
+        	<button class="h-12 w-32 text-gray-100 hover:text-gray-800">Contact</button>
+    	</div>
+		<div class="fixed bottom-12 left-12 bg-white rounded-full">
+			<Icon class="h-10 w-10" name="github" />
+		</div>
 		<slot />
 	</body>
 </html>
