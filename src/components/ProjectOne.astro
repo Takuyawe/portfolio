@@ -1,0 +1,18 @@
+---
+import {Icon} from "astro-icon/components"
+import { Image } from "astro:assets"
+---
+
+<div id="projects" class="h-screen w-full flex items-center justify-center">
+    <div class="flex flex-col gap-y-4">
+        <div class="text-white opacity-30 text-xl">GIS APPLICATION</div>
+        <div class="text-white text-6xl">Restaurant Search <br /> WebGIS</div>
+        <div class="text-white">Restaurant Search WebGIS is a web application that </br> users can search restaurants in any area of the world. </div>
+        <div class="text-white">Built with: Next.js, Node, TypeScript, Google Maps API.</div>
+        <div class="cursor-pointer text-white font-bold">View the code <Icon class="inline" name="right-arrow" /></div>
+        <div class="cursor-pointer text-yellow-300 hover:text-yellow-100 font-bold">Visit the app <Icon class="inline" name="right-arrow" /></div>
+    </div>
+    <div>
+        <Image src="/projects/project-1.svg" alt="project1" height={700} width={700} />
+    </div>
+</div>

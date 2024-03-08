@@ -1,0 +1,1 @@
+Food WebGIS is a web application that allows users to search for restaurants in any area of the world. <br></br> Users can also check the weather around the searched location. <br></br> It is built using Next.js and different kinds of APIs, such as Google Maps API, OpenWeather API, and Yelp API.
