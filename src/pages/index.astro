@@ -5,26 +5,27 @@ import About from '../components/About.astro';
 ---
 
 <Layout title="Welcome to My Porfolio">
-	<!-- TODO: IDによって表示するコンポーネントを -->
-	<Home />
-	<About />
+  <!-- TODO: IDによって表示するコンポーネントを -->
+  <Home />
+  <About />
 </Layout>
 
 <script>
-	import {currentPageId} from "../stores/pageId"
-	
-	let lastScrollPosition = window.scrollY || document.documentElement.scrollTop
+  import { currentPageId } from '../stores/pageId';
 
-	// TODO: mousewheelを一定時間無効にする
-	window.addEventListener("mousewheel", () => {
-		const currentScrollPosition = window.scrollY || document.documentElement.scrollTop
-		if (currentScrollPosition > lastScrollPosition) {
-			console.log("down")
-			currentPageId.set(currentPageId.get() + 1)
-		} else {
-			console.log("up")
-			currentPageId.set(currentPageId.get() - 1)
-		}
-		lastScrollPosition = currentScrollPosition
-	})
+  let lastScrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+  // TODO: mousewheelを一定時間無効にする
+  window.addEventListener('mousewheel', () => {
+    const currentScrollPosition =
+      window.scrollY || document.documentElement.scrollTop;
+    if (currentScrollPosition > lastScrollPosition) {
+      console.log('down');
+      currentPageId.set(currentPageId.get() + 1);
+    } else {
+      console.log('up');
+      currentPageId.set(currentPageId.get() - 1);
+    }
+    lastScrollPosition = currentScrollPosition;
+  });
 </script>

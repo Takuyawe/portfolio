@@ -1,10 +1,7 @@
-import { Button } from "../../@/components/ui/button"
-
+import { Button } from '../../@/components/ui/button';
 
 const ButtonReact = () => {
-  return (
-    <Button>Contact</Button>
-  )
-}
+  return <Button>Contact</Button>;
+};
 
-export default ButtonReact
+export default ButtonReact;

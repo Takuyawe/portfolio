@@ -1,9 +1,9 @@
 ---
-import "../styles/global.css"
-import {Icon} from "astro-icon/components"
+import '../styles/global.css';
+import { Icon } from 'astro-icon/components';
 
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -11,51 +11,60 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<div class="fixed top-12 left-12 h-12 text-gray-100 text-3xl">TAKUYA</div>
-    	<div class="hover:bg-gray-100 rounded-md fixed top-10 right-12 h-12 w-32 outline outline-1 outline-gray-100 flex items-center justify-center">
-        	<button class="h-12 w-32 text-gray-100 hover:text-gray-800">Contact</button>
-    	</div>
-		<div class="fixed bottom-12 left-12 bg-white rounded-full">
-			<Icon class="h-10 w-10" name="github" />
-		</div>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+
+  <body class="bg-gray-900">
+    <div class="fixed top-12 left-12 h-12 text-gray-100 text-3xl">TAKUYA</div>
+    <div
+      class="hover:bg-gray-100 rounded-md fixed top-10 right-12 h-12 w-32 outline outline-1 outline-gray-100 flex items-center justify-center">
+      <button class="h-12 w-32 text-gray-100 hover:text-gray-800"
+        >Contact</button
+      >
+    </div>
+    <div
+      class="fixed bottom-12 left-12 bg-white hover:bg-gray-200 rounded-full cursor-pointer">
+      <Icon class="h-10 w-10" name="github" />
+    </div>
+    <div
+      class="flex items-center gap-x-1 fixed bottom-12 right-6 text-white hover:text-gray-300 cursor-pointer text-sm [writing-mode:vertical-lr]">
+      Scroll to Bottom <Icon class="inline" name="down-arrow" />
+    </div>
+    <slot />
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
+  html {
+    font-family: system-ui, sans-serif;
+    background: #13151a;
+    background-size: 224px;
+  }
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
 </style>
