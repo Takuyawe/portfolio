@@ -56,3 +56,13 @@ export const MY_SKILLS = [
         icon: "skills/docker"
     }
 ]
+
+export const GLOBE_OPTIONS = {
+    globeImageUrl: '//unpkg.com/three-globe/example/img/earth-night.jpg',
+    backgroundColor: 'rgba(0,0,0,0)',
+    pointsData: [{ lat: 35.6895, lng: 139.6917, color: 'red', altitude: 0.1 }],
+    pointLat: 'lat',
+    pointLng: 'lng',
+    pointColor: 'color',
+    pointAltitude: 'altitude',
+}
