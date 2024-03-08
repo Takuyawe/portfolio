@@ -12,20 +12,29 @@ import About from '../components/About.astro';
 
 <script>
   import { currentPageId } from '../stores/pageId';
+  import { getViewSectionId } from "../modules"
 
-  let lastScrollPosition = window.scrollY || document.documentElement.scrollTop;
+  // let lastScrollPosition = window.scrollY || document.documentElement.scrollTop;
 
-  // TODO: mousewheelを一定時間無効にする
-  window.addEventListener('mousewheel', () => {
-    const currentScrollPosition =
-      window.scrollY || document.documentElement.scrollTop;
-    if (currentScrollPosition > lastScrollPosition) {
+  // TODO: mousewheelでのスクロールに対応させる
+  window.addEventListener('keydown', (e) => {
+    let nextPageId = currentPageId.get()
+    // const currentScrollPosition =
+    //   window.scrollY || document.documentElement.scrollTop;
+    if (e.key === "ArrowDown") {
       console.log('down');
-      currentPageId.set(currentPageId.get() + 1);
-    } else {
+      nextPageId++
+    } else if (e.key === "ArrowUp") {
       console.log('up');
-      currentPageId.set(currentPageId.get() - 1);
+      nextPageId--
     }
-    lastScrollPosition = currentScrollPosition;
+    const sectionId = getViewSectionId(nextPageId);
+    currentPageId.set(nextPageId);
+
+    console.log(nextPageId)
+
+    document.getElementById(sectionId)?.scrollIntoView({behavior: "smooth"})
   });
+
+  
 </script>
