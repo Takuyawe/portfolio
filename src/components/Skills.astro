@@ -3,7 +3,7 @@ import { Icon } from "astro-icon/components";
 import {MY_SKILLS} from "../consts";
 ---
 
-<div id="skills" class="h-screen w-full flex flex-col items-center justify-center gap-y-3">
+<div id="skills" class="relative h-screen w-full flex flex-col items-center justify-center gap-y-3">
     <div class="text-white opacity-30 text-xl">A PROBLEM IS A CHANCE FOR YOU TO DO YOUR BEST.</div>
     <div class="text-white text-6xl">Skills & Experience</div>
     <div class="text-white w-1/2 text-center">The main area of expertise is front end development (client side of the web).</br></br>HTML, CSS, JS, building small and medium web applications with Vue or React, custom plugins, features, animations, and coding interactive layouts. I have also full-stack developer experience with one of the most popular open source CMS on the web - WordPress</div>
@@ -16,4 +16,21 @@ import {MY_SKILLS} from "../consts";
             </div>
         ))}
     </div>
+    <div id="skills-move-to-bottom"
+        class="flex items-center gap-x-1 absolute bottom-12 right-6 text-white hover:text-gray-300 cursor-pointer text-sm [writing-mode:vertical-lr]">
+        Scroll to Bottom <Icon class="inline" name="down-arrow" />
+  </div>
 </div> 
+
+<script>
+    import { currentPageId } from '../stores/pageId';
+    import { getViewSectionId } from "../modules"
+    import { PAGE_ID } from "../consts"
+
+    document.getElementById("skills-move-to-bottom")?.addEventListener("click", (e) => {
+        e.preventDefault()
+        currentPageId.set(PAGE_ID.CONTACT)
+        const sectionId = getViewSectionId(PAGE_ID.CONTACT)
+        document.getElementById(sectionId)?.scrollIntoView({behavior: "smooth"})
+    })
+</script>

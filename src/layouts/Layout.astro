@@ -24,6 +24,7 @@ const { title } = Astro.props;
   </head>
 
   <body class="bg-gray-900 overflow-hidden">
+    <!-- on top of the globe -->
     <div id="layout-move-to-home" class="fixed top-5 left-4 h-18 cursor-pointer text-white hover:text-gray-200 text-3xl flex item-center justify-center gap-x-2">
       <AnimationIconComponent client:load animationData={animationData} className='size-20' />
       <div class="self-center">WEB DEV</div>
@@ -39,11 +40,6 @@ const { title } = Astro.props;
       <a href="https://github.com/Takuyawe" target="_blank">
         <Icon class="h-10 w-10" name="github" />
       </a>
-    </div>
-    <!-- TODO: Scroll to Top if pageId is 4 -->
-    <div
-      class="flex items-center gap-x-1 fixed bottom-12 right-6 text-white hover:text-gray-300 cursor-pointer text-sm [writing-mode:vertical-lr]">
-      Scroll to Bottom <Icon class="inline" name="down-arrow" />
     </div>
     <slot />
   </body>

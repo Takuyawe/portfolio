@@ -1,19 +1,29 @@
+---
+import { Icon } from 'astro-icon/components';
 
+---
 
-<div id="contact" class="h-screen w-full flex items-center justify-center">
+<div id="contact" class="relative h-screen w-full flex items-center justify-center">
     <div id="globe-container" class="w-2/3 h-screen">
         <div id="globe" class="w-full h-full"></div>
     </div>    
     <div class="flex flex-col w-1/3 gap-y-4">
         <div class="text-white">What would you do if you had a software </br> expert available at your fingertips?</div>
-        <div class="text-white">Want to start new project? Or just say hey.</br> You can also follow me on LinkedIn.</div>
+        <div class="text-white">Want to start new project? Or just say hey.</br> You can also follow me on <a class="cursor-pointer text-yellow-300 hover:text-yellow-100" href="https://www.linkedin.com/in/takuya-nemoto-4855501a8/" target="_blank">Linkedin</a>.</div>
         <div class="text-white text-3xl">Test@gmail.com</div>
+    </div>
+    <div id="contact-move-to-top"
+      class="flex items-center gap-x-1 absolute bottom-12 right-6 text-white hover:text-gray-300 cursor-pointer text-sm [writing-mode:vertical-lr]">
+      <Icon class="inline" name="up-arrow" /> Scroll to Top
     </div>
 </div>
 
 <script>
     import Globe from "globe.gl";
     import {GLOBE_OPTIONS} from "../consts"
+    import { currentPageId } from '../stores/pageId';
+    import { getViewSectionId } from "../modules"
+    import { PAGE_ID } from "../consts"
 
     const globeContainer = document.getElementById('globe-container') || document.createElement('div');
     const width = globeContainer.offsetWidth;
@@ -41,4 +51,12 @@
 
         myGlobe.width(newWidth).height(newHeight);
     });
+
+    document.getElementById("contact-move-to-top")?.addEventListener("click", (e) => {
+        e.preventDefault()
+        currentPageId.set(PAGE_ID.HOME)
+        const sectionId = getViewSectionId(PAGE_ID.HOME)
+        document.getElementById(sectionId)?.scrollIntoView({behavior: "smooth"})
+    })
+    
 </script>

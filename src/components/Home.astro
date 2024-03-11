@@ -11,8 +11,12 @@ import AnimationIconComponent from "./AnimationIconComponent"
         <a id="home-move-to-about" class="text-purple-600 hover:text-purple-400 font-bold" href="">About me <Icon class="inline" name="right-arrow" /></a>
     </div>
     <div class="w-2/5"></div>
-    <div class="absolute bottom-12 left-1/2 h-12 w-12 bg-gray-300 rounded-lg opacity-80">
+    <div class="absolute bottom-12 left-1/2 h-12 w-12 bg-white rounded-lg opacity-40">
         <AnimationIconComponent client:load animationData={animationData} />
+    </div>
+    <div id="home-move-to-bottom"
+      class="flex items-center gap-x-1 absolute bottom-12 right-6 text-white hover:text-gray-300 cursor-pointer text-sm [writing-mode:vertical-lr]">
+      Scroll to Bottom <Icon class="inline" name="down-arrow" />
     </div>
 </div>
 
@@ -26,5 +30,12 @@ import AnimationIconComponent from "./AnimationIconComponent"
         currentPageId.set(PAGE_ID.ABOUT)
         const sectionId = getViewSectionId(PAGE_ID.ABOUT)
         document.getElementById(sectionId)?.scrollIntoView({behavior: "smooth"})
+    })
+
+    document.getElementById("home-move-to-bottom")?.addEventListener("click", (e) => {
+      e.preventDefault()
+      currentPageId.set(PAGE_ID.CONTACT)
+      const sectionId = getViewSectionId(PAGE_ID.CONTACT)
+      document.getElementById(sectionId)?.scrollIntoView({behavior: "smooth"})
     })
 </script>

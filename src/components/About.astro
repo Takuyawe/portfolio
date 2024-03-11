@@ -1,8 +1,8 @@
 ---
-
+import {Icon} from "astro-icon/components"
 ---
 
-<div id="about" class="h-screen w-full flex items-center justify-center">
+<div id="about" class="relative h-screen w-full flex items-center justify-center">
   <div class="flex flex-col w-2/5 gap-y-5">
     <div class="text-white text-6xl">
       Hi, I'm Takuya <br />
@@ -16,7 +16,23 @@
     Professionally connected with the web development industry. </br></br>
     Problem solver, well-organised person, loyal employee with high attention to detail. </br>
     Fan of Boxing, outdoor activities, video games, and coding of course. </br></br>
-    Interested in the entire frontend spectrum and working on ambitious projects with interesting people.</div>
+    Interested in the entire frontend spectrum and working on ambitious projects with interesting people.
+  </div>
+  <div id="about-move-to-bottom"
+    class="flex items-center gap-x-1 absolute bottom-12 right-6 text-white hover:text-gray-300 cursor-pointer text-sm [writing-mode:vertical-lr]">
+    Scroll to Bottom <Icon class="inline" name="down-arrow" />
+  </div>
 </div>
 
-<script></script>
+<script>
+  import { PAGE_ID } from "../consts"
+  import { getViewSectionId } from "../modules"
+  import { currentPageId } from "../stores/pageId"
+
+  document.getElementById("about-move-to-bottom")?.addEventListener("click", (e) => {
+    e.preventDefault()
+    currentPageId.set(PAGE_ID.CONTACT)
+    const sectionId = getViewSectionId(PAGE_ID.CONTACT)
+    document.getElementById(sectionId)?.scrollIntoView({behavior: "smooth"})
+  })
+</script>
