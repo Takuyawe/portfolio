@@ -1,12 +1,17 @@
 ---
 import {Icon} from "astro-icon/components"
+import animationData from "../../public/animated-icons/mouse.json"
+import AnimationIconComponent from "./AnimationIconComponent"
 ---
 
 <div id="home" class="h-screen w-full bg-gray-900 flex justify-center items-center">
     <div class="flex flex-col w-2/5 gap-y-5">
         <div class="text-6xl font-bold text-white">Front-End Software </br> Developer</div>
         <div class="text-xl text-white">Resolving design problems, building smart user interfaces and useful interactions, developing rich web applications and seamless web experiences.</div>
-        <a class="text-purple-600 font-cbold" href="">About me <Icon class="inline" name="right-arrow" /></a>
+        <a class="text-purple-600 hover:text-purple-400 font-cbold" href="">About me <Icon class="inline" name="right-arrow" /></a>
     </div>
     <div class="w-2/5"></div>
+    <div class="absolute bottom-12 left-1/2 h-12 w-12 bg-gray-300 rounded-lg opacity-80">
+        <AnimationIconComponent client:load animationData={animationData} />
+    </div>
 </div>

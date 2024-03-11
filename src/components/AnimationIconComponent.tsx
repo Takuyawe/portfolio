@@ -3,12 +3,11 @@ import lottie from 'lottie-web';
 
 type Props = {
     animationData: any;
+    className?: string;
 };
 
-const MouseWheel = ({ animationData }: Props) => {
+const AnimationIconComponent = ({ animationData, className }: Props) => {
   const animationContainer = useRef<HTMLDivElement | null>(null);
-
-  console.log(animationData)
 
   useEffect(() => {
     if (animationContainer.current === null) return
@@ -23,7 +22,7 @@ const MouseWheel = ({ animationData }: Props) => {
     return () => anim.destroy(); // Optional clean up for unmounting
   }, [animationData]);
 
-  return <div ref={animationContainer}></div>;
+  return <div className={className} ref={animationContainer}></div>;
 };
 
-export default MouseWheel;
+export default AnimationIconComponent;

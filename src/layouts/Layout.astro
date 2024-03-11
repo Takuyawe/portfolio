@@ -1,9 +1,9 @@
 ---
 import '../styles/global.css';
 import { Icon } from 'astro-icon/components';
-import animationData from "../../public/animated-icons/mouse.json"
-import MouseWheel from "../components/MouseWheel"
-import type { onPageLoad } from 'astro/virtual-modules/transitions-events.js';
+import animationData from "../../public/animated-icons/dev.json"
+import AnimationIconComponent from "../components/AnimationIconComponent"
+
 
 interface Props {
   title: string;
@@ -24,10 +24,13 @@ const { title } = Astro.props;
   </head>
 
   <body class="bg-gray-900 overflow-hidden">
-    <div class="fixed top-12 left-12 cursor-pointer text-white hover:text-gray-200 text-3xl flex item-center justify-center gap-x-2"><Icon class="inline size-6 self-center" name="terminal" />DVLPR</div>
+    <div class="fixed top-5 left-4 h-18 cursor-pointer text-white hover:text-gray-200 text-3xl flex item-center justify-center gap-x-2">
+      <AnimationIconComponent client:load animationData={animationData} className='size-20 opacity-70' />
+      <div class="self-center">WEB DEV</div>
+    </div>
     <div
-      class="hover:bg-gray-100 rounded-md fixed top-10 right-12 h-12 w-32 outline outline-1 outline-gray-100 flex items-center justify-center">
-      <button class="h-12 w-32 text-gray-100 hover:text-gray-800"
+      class="transition ease-in-out delay-50 hover:bg-gray-100 rounded-md fixed top-10 right-12 h-12 w-32 outline outline-1 outline-gray-100 flex items-center justify-center">
+      <button class="h-12 w-32 text-gray-100 hover:text-gray-800 transition ease-in-out delay-50"
         >Contact</button
       >
     </div>
@@ -39,9 +42,6 @@ const { title } = Astro.props;
     <div
       class="flex items-center gap-x-1 fixed bottom-12 right-6 text-white hover:text-gray-300 cursor-pointer text-sm [writing-mode:vertical-lr]">
       Scroll to Bottom <Icon class="inline" name="down-arrow" />
-    </div>
-    <div class="fixed bottom-12 left-1/2 h-12 w-12 bg-gray-300 rounded-lg opacity-80">
-      <MouseWheel client:load animationData={animationData} />
     </div>
     <slot />
   </body>
