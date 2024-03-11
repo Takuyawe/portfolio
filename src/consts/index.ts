@@ -66,3 +66,11 @@ export const GLOBE_OPTIONS = {
     pointColor: 'color',
     pointAltitude: 'altitude',
 }
+
+export const PAGE_ID = {
+    HOME: 0,
+    ABOUT: 1,
+    SKILLS: 2,
+    PROJECTS: 3,
+    CONTACT: 4
+}

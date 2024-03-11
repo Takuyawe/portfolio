@@ -24,19 +24,21 @@ const { title } = Astro.props;
   </head>
 
   <body class="bg-gray-900 overflow-hidden">
-    <div class="fixed top-5 left-4 h-18 cursor-pointer text-white hover:text-gray-200 text-3xl flex item-center justify-center gap-x-2">
-      <AnimationIconComponent client:load animationData={animationData} className='size-20 opacity-70' />
+    <div id="layout-move-to-home" class="fixed top-5 left-4 h-18 cursor-pointer text-white hover:text-gray-200 text-3xl flex item-center justify-center gap-x-2">
+      <AnimationIconComponent client:load animationData={animationData} className='size-20' />
       <div class="self-center">WEB DEV</div>
     </div>
     <div
       class="transition ease-in-out delay-50 hover:bg-gray-100 rounded-md fixed top-10 right-12 h-12 w-32 outline outline-1 outline-gray-100 flex items-center justify-center">
-      <button class="h-12 w-32 text-gray-100 hover:text-gray-800 transition ease-in-out delay-50"
+      <button id="layout-move-to-contact" class="h-12 w-32 text-gray-100 hover:text-gray-800 transition ease-in-out delay-50"
         >Contact</button
       >
     </div>
     <div
       class="fixed bottom-12 left-12 bg-white hover:bg-gray-200 rounded-full cursor-pointer">
-      <Icon class="h-10 w-10" name="github" />
+      <a href="https://github.com/Takuyawe" target="_blank">
+        <Icon class="h-10 w-10" name="github" />
+      </a>
     </div>
     <!-- TODO: Scroll to Top if pageId is 4 -->
     <div
@@ -46,3 +48,23 @@ const { title } = Astro.props;
     <slot />
   </body>
 </html>
+
+<script>
+  import { currentPageId } from '../stores/pageId';
+  import { getViewSectionId } from "../modules"
+  import { PAGE_ID } from "../consts"
+
+  document.getElementById("layout-move-to-home")?.addEventListener("click", (e) => {
+      e.preventDefault()
+      currentPageId.set(PAGE_ID.HOME)
+      const sectionId = getViewSectionId(PAGE_ID.HOME)
+      document.getElementById(sectionId)?.scrollIntoView({behavior: "smooth"})
+  })
+
+  document.getElementById("layout-move-to-contact")?.addEventListener("click", (e) => {
+      e.preventDefault()
+      currentPageId.set(PAGE_ID.CONTACT)
+      const sectionId = getViewSectionId(PAGE_ID.CONTACT)
+      document.getElementById(sectionId)?.scrollIntoView({behavior: "smooth"})
+  })
+</script>

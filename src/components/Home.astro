@@ -8,10 +8,23 @@ import AnimationIconComponent from "./AnimationIconComponent"
     <div class="flex flex-col w-2/5 gap-y-5">
         <div class="text-6xl font-bold text-white">Front-End Software </br> Developer</div>
         <div class="text-xl text-white">Resolving design problems, building smart user interfaces and useful interactions, developing rich web applications and seamless web experiences.</div>
-        <a class="text-purple-600 hover:text-purple-400 font-cbold" href="">About me <Icon class="inline" name="right-arrow" /></a>
+        <a id="home-move-to-about" class="text-purple-600 hover:text-purple-400 font-bold" href="">About me <Icon class="inline" name="right-arrow" /></a>
     </div>
     <div class="w-2/5"></div>
     <div class="absolute bottom-12 left-1/2 h-12 w-12 bg-gray-300 rounded-lg opacity-80">
         <AnimationIconComponent client:load animationData={animationData} />
     </div>
 </div>
+
+<script>
+    import { currentPageId } from '../stores/pageId';
+    import { getViewSectionId } from "../modules"
+    import { PAGE_ID } from "../consts"
+
+    document.getElementById("home-move-to-about")?.addEventListener("click", (e) => {
+        e.preventDefault()
+        currentPageId.set(PAGE_ID.ABOUT)
+        const sectionId = getViewSectionId(PAGE_ID.ABOUT)
+        document.getElementById(sectionId)?.scrollIntoView({behavior: "smooth"})
+    })
+</script>
