@@ -19,7 +19,6 @@ import Contact from "../components/Contact.astro"
   <!-- <ProjectTwo /> -->
   <Contact />
 </Layout>
-c
 <script>
   import { currentPageId } from '../stores/pageId';
   import { getViewSectionId } from "../modules"
@@ -78,6 +77,4 @@ c
     currentPageId.set(nextPageId);
     document.getElementById(sectionId)?.scrollIntoView({behavior: "smooth"})
   });
-
-  
 </script>

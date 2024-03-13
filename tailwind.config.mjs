@@ -66,10 +66,21 @@ module.exports = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
         },
+        "text-shadow-pop-tr": {
+          "0%": {
+              "text-shadow": "0 0 #555, 0 0 #555, 0 0 #555, 0 0 #555, 0 0 #555, 0 0 #555, 0 0 #555, 0 0 #555",
+              transform: "translateX(0) translateY(0)"
+          },
+          to: {
+              "text-shadow": "1px -1px #555, 2px -2px #555, 3px -3px #555, 4px -4px #555, 5px -5px #555, 6px -6px #555, 7px -7px #555, 8px -8px #555",
+              transform: "translateX(-8px) translateY(8px)"
+          }
+      }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        "text-shadow-pop-tr": "text-shadow-pop-tr 0.6s ease   both"
       },
     },
   },
