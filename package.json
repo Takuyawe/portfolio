@@ -8,8 +8,8 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "eslint --ext .ts,.js,.tsx . && prettier --check \"./**/*.{ts,js,tsx}\"",
-    "lint:fix": "eslint --ext .ts,.js,.tsx . --fix && prettier --write \"./**/*.{ts,js,tsx,scss}\"",
+    "lint": "eslint . && prettier --check \"./**/*.{ts,js,tsx,astro}\"",
+    "lint:fix": "eslint . --fix && prettier --write \"./**/*.{ts,js,tsx,astro}\"",
     "format": "prettier --write './**/*.{js,ts,tsx,scss,astro}'"
   },
   "dependencies": {
