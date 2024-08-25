@@ -18,9 +18,6 @@ export default [
       },
       globals: globals.browser,
     },
-    rules: {
-      "unused-imports/no-unused-imports": "error",
-    },
   },
   eslintConfigPrettier,
 ];
