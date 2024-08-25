@@ -10,7 +10,7 @@
     "astro": "astro",
     "lint": "eslint --ext .ts,.js,.tsx . && prettier --check \"./**/*.{ts,js,tsx}\"",
     "lint:fix": "eslint --ext .ts,.js,.tsx . --fix && prettier --write \"./**/*.{ts,js,tsx,scss}\"",
-    "format": "prettier --write './**/*.{js,ts,tsx,scss}'"
+    "format": "prettier --write './**/*.{js,ts,tsx,scss,astro}'"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.6",
