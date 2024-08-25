@@ -26,7 +26,7 @@ const { title } = Astro.props;
   <body id="body" class="bg-gray-900 overflow-hidden">
     <!-- on top of the globe -->
     <div id="layout-move-to-home" class="fixed top-5 left-4 h-18 cursor-pointer text-white hover:text-gray-200 text-3xl flex item-center justify-center gap-x-2">
-      <AnimationIconComponent client:load animationData={animationData} className='size-20' />
+      <AnimationIconComponent client:only animationData={animationData} className='size-20' />
       <div class="self-center">WEB DEV</div>
     </div>
     <div
