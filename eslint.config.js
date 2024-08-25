@@ -1,10 +1,13 @@
-import pluginTypescript from "@typescript-eslint/eslint-plugin";
-import parserTypescript from "@typescript-eslint/parser";
+import eslint from "@eslint/js";
+import tseslint from "typescript-eslint";
 import pluginAstro from "eslint-plugin-astro";
-import prettier from "eslint-config-prettier";
+import eslintConfigPrettier from "eslint-config-prettier";
 import globals from "globals";
 
 export default [
+  eslint.configs.recommended,
+  ...tseslint.configs.recommended,
+  ...pluginAstro.configs.recommended,
   {
     files: ["**/*.{js,mjs,cjs,ts,astro}"],
     languageOptions: {
@@ -14,14 +17,9 @@ export default [
       },
       globals: globals.browser,
     },
-    plugins: {
-      "@typescript-eslint": pluginTypescript,
-      astro: pluginAstro,
-    },
     rules: {
-      ...pluginTypescript.configs.recommended.rules,
-      ...pluginAstro.configs.recommended.rules,
+      "unused-imports/no-unused-imports": "error",
     },
   },
-  prettier,
+  eslintConfigPrettier,
 ];
