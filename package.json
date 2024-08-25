@@ -36,12 +36,16 @@
     "typescript": "^5.4.2"
   },
   "devDependencies": {
+    "@eslint/js": "^9.9.1",
     "@typescript-eslint/eslint-plugin": "^8.2.0",
     "@typescript-eslint/parser": "^8.2.0",
+    "eslint": "^9.9.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-astro": "^1.2.3",
+    "globals": "^15.9.0",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.13.0",
-    "prettier-plugin-tailwindcss": "^0.6.6"
+    "prettier-plugin-tailwindcss": "^0.6.6",
+    "typescript-eslint": "^8.2.0"
   }
 }

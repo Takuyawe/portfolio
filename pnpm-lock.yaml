@@ -72,18 +72,27 @@ importers:
         specifier: ^5.4.2
         version: 5.5.4
     devDependencies:
+      '@eslint/js':
+        specifier: ^9.9.1
+        version: 9.9.1
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.2.0
         version: 8.2.0(@typescript-eslint/parser@8.2.0(eslint@9.9.1(jiti@1.21.6))(typescript@5.5.4))(eslint@9.9.1(jiti@1.21.6))(typescript@5.5.4)
       '@typescript-eslint/parser':
         specifier: ^8.2.0
         version: 8.2.0(eslint@9.9.1(jiti@1.21.6))(typescript@5.5.4)
+      eslint:
+        specifier: ^9.9.1
+        version: 9.9.1(jiti@1.21.6)
       eslint-config-prettier:
         specifier: ^9.1.0
         version: 9.1.0(eslint@9.9.1(jiti@1.21.6))
       eslint-plugin-astro:
         specifier: ^1.2.3
         version: 1.2.3(eslint@9.9.1(jiti@1.21.6))(typescript@5.5.4)
+      globals:
+        specifier: ^15.9.0
+        version: 15.9.0
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
@@ -93,6 +102,9 @@ importers:
       prettier-plugin-tailwindcss:
         specifier: ^0.6.6
         version: 0.6.6(prettier-plugin-astro@0.13.0)(prettier@3.3.3)
+      typescript-eslint:
+        specifier: ^8.2.0
+        version: 8.2.0(eslint@9.9.1(jiti@1.21.6))(typescript@5.5.4)
 
 packages:
 
@@ -2853,6 +2865,15 @@ packages:
 
   typescript-auto-import-cache@0.3.3:
     resolution: {integrity: sha512-ojEC7+Ci1ij9eE6hp8Jl9VUNnsEKzztktP5gtYNRMrTmfXVwA1PITYYAkpxCvvupdSYa/Re51B6KMcv1CTZEUA==}
+
+  typescript-eslint@8.2.0:
+    resolution: {integrity: sha512-DmnqaPcML0xYwUzgNbM1XaKXpEb7BShYf2P1tkUmmcl8hyeG7Pj08Er7R9bNy6AufabywzJcOybQAtnD/c9DGw==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    peerDependencies:
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
 
   typescript@5.5.4:
     resolution: {integrity: sha512-Mtq29sKDAEYP7aljRgtPOpTvOfbwRWlS6dPRzwjdE+C0R4brX/GUyhHSecbHMFLNBLcJIPt9nl9yG5TZ1weH+Q==}
@@ -6341,6 +6362,17 @@ snapshots:
   typescript-auto-import-cache@0.3.3:
     dependencies:
       semver: 7.6.3
+
+  typescript-eslint@8.2.0(eslint@9.9.1(jiti@1.21.6))(typescript@5.5.4):
+    dependencies:
+      '@typescript-eslint/eslint-plugin': 8.2.0(@typescript-eslint/parser@8.2.0(eslint@9.9.1(jiti@1.21.6))(typescript@5.5.4))(eslint@9.9.1(jiti@1.21.6))(typescript@5.5.4)
+      '@typescript-eslint/parser': 8.2.0(eslint@9.9.1(jiti@1.21.6))(typescript@5.5.4)
+      '@typescript-eslint/utils': 8.2.0(eslint@9.9.1(jiti@1.21.6))(typescript@5.5.4)
+    optionalDependencies:
+      typescript: 5.5.4
+    transitivePeerDependencies:
+      - eslint
+      - supports-color
 
   typescript@5.5.4: {}
 
