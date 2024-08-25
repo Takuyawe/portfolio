@@ -1,0 +1,13 @@
+TODO
+japanese
+icon sizes
+edit readme
+remove threejs
+refactor tailwindcss
+responsive design
+change color
+replace texts
+add color to contact hover
+add github link
+projects with photos with github links
+carousel for projects
