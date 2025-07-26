@@ -1,15 +1,14 @@
 ---
-import '../styles/global.css';
-import { Icon } from 'astro-icon/components';
-import animationData from "../../public/animated-icons/dev.json"
-import AnimationIconComponent from "../components/AnimationIconComponent"
-
+import '../styles/global.css'
+import { Icon } from 'astro-icon/components'
+import animationData from '../../public/animated-icons/dev.json'
+import AnimationIconComponent from '../components/AnimationIconComponent'
 
 interface Props {
-  title: string;
+  title: string
 }
 
-const { title } = Astro.props;
+const { title } = Astro.props
 ---
 
 <!doctype html>
@@ -25,18 +24,22 @@ const { title } = Astro.props;
 
   <body id="body" class="bg-gray-900 overflow-hidden">
     <!-- on top of the globe -->
-    <div id="layout-move-to-home" class="z-10 fixed top-5 left-4 h-18 cursor-pointer text-white hover:text-gray-200 text-3xl flex item-center justify-center gap-x-2">
-      <AnimationIconComponent client:only animationData={animationData} className='size-20' />
+    <div
+      id="layout-move-to-home"
+      class="z-10 fixed top-5 left-4 h-18 cursor-pointer text-white hover:text-gray-200 text-3xl flex item-center justify-center gap-x-2"
+    >
+      <AnimationIconComponent client:only animationData={animationData} className="size-20" />
       <div class="self-center">WEB DEV</div>
     </div>
     <div
-      class="transition ease-in-out delay-50 hover:bg-gray-100 rounded-md fixed top-10 right-12 h-12 w-32 outline outline-1 outline-gray-100 flex items-center justify-center">
-      <button id="layout-move-to-contact" class="h-12 w-32 text-gray-100 hover:text-gray-800 transition ease-in-out delay-50"
-        >Contact</button
+      class="transition ease-in-out delay-50 hover:bg-gray-100 rounded-md fixed top-10 right-12 h-12 w-32 outline outline-1 outline-gray-100 flex items-center justify-center"
+    >
+      <button
+        id="layout-move-to-contact"
+        class="h-12 w-32 text-gray-100 hover:text-gray-800 transition ease-in-out delay-50">Contact</button
       >
     </div>
-    <div
-      class="z-10 fixed bottom-12 left-12 bg-white hover:bg-gray-200 rounded-full cursor-pointer">
+    <div class="z-10 fixed bottom-12 left-12 bg-white hover:bg-gray-200 rounded-full cursor-pointer">
       <a href="https://github.com/Takuyawe" target="_blank">
         <Icon class="h-10 w-10" name="github" />
       </a>
@@ -46,21 +49,21 @@ const { title } = Astro.props;
 </html>
 
 <script>
-  import { currentPageId } from '../stores/pageId';
-  import { getViewSectionId } from "../modules"
-  import { PAGE_ID } from "../consts"
+  import { currentPageId } from '../stores/pageId'
+  import { getViewSectionId } from '../modules'
+  import { PAGE_ID } from '../consts'
 
-  document.getElementById("layout-move-to-home")?.addEventListener("click", (e) => {
-      e.preventDefault()
-      currentPageId.set(PAGE_ID.HOME)
-      const sectionId = getViewSectionId(PAGE_ID.HOME)
-      document.getElementById(sectionId)?.scrollIntoView({behavior: "smooth"})
+  document.getElementById('layout-move-to-home')?.addEventListener('click', (e) => {
+    e.preventDefault()
+    currentPageId.set(PAGE_ID.HOME)
+    const sectionId = getViewSectionId(PAGE_ID.HOME)
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
   })
 
-  document.getElementById("layout-move-to-contact")?.addEventListener("click", (e) => {
-      e.preventDefault()
-      currentPageId.set(PAGE_ID.CONTACT)
-      const sectionId = getViewSectionId(PAGE_ID.CONTACT)
-      document.getElementById(sectionId)?.scrollIntoView({behavior: "smooth"})
+  document.getElementById('layout-move-to-contact')?.addEventListener('click', (e) => {
+    e.preventDefault()
+    currentPageId.set(PAGE_ID.CONTACT)
+    const sectionId = getViewSectionId(PAGE_ID.CONTACT)
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
   })
 </script>

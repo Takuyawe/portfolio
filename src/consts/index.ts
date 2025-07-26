@@ -1,76 +1,76 @@
 export const MY_SKILLS = [
-    {
-        name: "HTML",
-        icon: "skills/html5"
-    },
-    {
-        name: "CSS",
-        icon: "skills/css"
-    },
-    {
-        name: "JavaScript",
-        icon: "skills/js"
-    },
-    {
-        name: "TypeScript",
-        icon: "skills/typescript"
-    },
-    {
-        name: "React",
-        icon: "skills/reactjs"
-    },
-    {
-        name: "Next",
-        icon: "skills/nextjs"
-    },
-    {
-        name: "Node",
-        icon: "skills/nodejs"
-    },
-    {
-        name: "AWS",
-        icon: "skills/aws"
-    },
-    {
-        name: "Git",
-        icon: "skills/git"
-    },
-    {
-        name: "GitLab",
-        icon: "skills/gitlab"
-    },
-    {
-        name: "Postgres",
-        icon: "skills/postgresql"
-    },
-    {
-        name: "Linux",
-        icon: "skills/linux"
-    },
-    {
-        name: "Python",
-        icon: "skills/python"
-    },
-    {
-        name: "Docker",
-        icon: "skills/docker"
-    }
+  {
+    name: 'HTML',
+    icon: 'skills/html5'
+  },
+  {
+    name: 'CSS',
+    icon: 'skills/css'
+  },
+  {
+    name: 'JavaScript',
+    icon: 'skills/js'
+  },
+  {
+    name: 'TypeScript',
+    icon: 'skills/typescript'
+  },
+  {
+    name: 'React',
+    icon: 'skills/reactjs'
+  },
+  {
+    name: 'Next',
+    icon: 'skills/nextjs'
+  },
+  {
+    name: 'Node',
+    icon: 'skills/nodejs'
+  },
+  {
+    name: 'AWS',
+    icon: 'skills/aws'
+  },
+  {
+    name: 'Git',
+    icon: 'skills/git'
+  },
+  {
+    name: 'GitLab',
+    icon: 'skills/gitlab'
+  },
+  {
+    name: 'Postgres',
+    icon: 'skills/postgresql'
+  },
+  {
+    name: 'Linux',
+    icon: 'skills/linux'
+  },
+  {
+    name: 'Python',
+    icon: 'skills/python'
+  },
+  {
+    name: 'Docker',
+    icon: 'skills/docker'
+  }
 ]
 
 export const GLOBE_OPTIONS = {
-    globeImageUrl: '//unpkg.com/three-globe/example/img/earth-night.jpg',
-    backgroundColor: 'rgba(0,0,0,0)',
-    pointsData: [{ lat: 35.6895, lng: 139.6917, color: 'red', altitude: 0.1 }],
-    pointLat: 'lat',
-    pointLng: 'lng',
-    pointColor: 'color',
-    pointAltitude: 'altitude',
+  globeImageUrl: '//unpkg.com/three-globe/example/img/earth-night.jpg',
+  backgroundColor: 'rgba(0,0,0,0)',
+  pointsData: [{ lat: 35.6895, lng: 139.6917, color: 'red', altitude: 0.1 }],
+  pointLat: 'lat',
+  pointLng: 'lng',
+  pointColor: 'color',
+  pointAltitude: 'altitude'
 }
 
 export const PAGE_ID = {
-    HOME: 0,
-    ABOUT: 1,
-    SKILLS: 2,
-    PROJECTS: 3,
-    CONTACT: 4
+  HOME: 0,
+  ABOUT: 1,
+  SKILLS: 2,
+  PROJECTS: 3,
+  CONTACT: 4
 }

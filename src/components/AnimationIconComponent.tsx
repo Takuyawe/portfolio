@@ -1,13 +1,13 @@
-import { useEffect, useRef } from 'react';
-import lottie from 'lottie-web';
+import { useEffect, useRef } from 'react'
+import lottie from 'lottie-web'
 
 type Props = {
-    animationData: any;
-    className?: string;
-};
+  animationData: any
+  className?: string
+}
 
 const AnimationIconComponent = ({ animationData, className }: Props) => {
-  const animationContainer = useRef<HTMLDivElement | null>(null);
+  const animationContainer = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
     if (animationContainer.current === null) return
@@ -16,13 +16,13 @@ const AnimationIconComponent = ({ animationData, className }: Props) => {
       renderer: 'svg',
       loop: true,
       autoplay: true,
-      animationData: animationData,
-    });
+      animationData: animationData
+    })
 
-    return () => anim.destroy(); // Optional clean up for unmounting
-  }, [animationData]);
+    return () => anim.destroy() // Optional clean up for unmounting
+  }, [animationData])
 
-  return <div className={className} ref={animationContainer}></div>;
-};
+  return <div className={className} ref={animationContainer}></div>
+}
 
-export default AnimationIconComponent;
+export default AnimationIconComponent

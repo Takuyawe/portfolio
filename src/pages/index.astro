@@ -1,12 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Home from '../components/Home.astro';
-import About from '../components/About.astro';
-import Skills from '../components/Skills.astro';
-import Projects from '../components/Projects.astro';
-import ProjectOne from "../components/ProjectOne.astro"
-import ProjectTwo from "../components/ProjectTwo.astro"
-import Contact from "../components/Contact.astro"
+import Layout from '../layouts/Layout.astro'
+import Home from '../components/Home.astro'
+import About from '../components/About.astro'
+import Skills from '../components/Skills.astro'
+import Projects from '../components/Projects.astro'
+import ProjectOne from '../components/ProjectOne.astro'
+import ProjectTwo from '../components/ProjectTwo.astro'
+import Contact from '../components/Contact.astro'
 ---
 
 <Layout title="Welcome to My Porfolio">
@@ -20,14 +20,14 @@ import Contact from "../components/Contact.astro"
   <Contact />
 </Layout>
 <script>
-  import { currentPageId } from '../stores/pageId';
-  import { getViewSectionId } from "../modules"
+  import { currentPageId } from '../stores/pageId'
+  import { getViewSectionId } from '../modules'
 
   // let lastScrollPosition = window.scrollY || document.documentElement.scrollTop;
 
   let isScrollable = true
 
-  window.addEventListener("wheel", async (e) => {
+  window.addEventListener('wheel', async (e) => {
     if (!isScrollable) return
     isScrollable = false
     let nextPageId = currentPageId.get()
@@ -45,10 +45,10 @@ import Contact from "../components/Contact.astro"
         nextPageId--
       }
     }
-    const sectionId = getViewSectionId(nextPageId);
-    currentPageId.set(nextPageId);
-    document.getElementById(sectionId)?.scrollIntoView({behavior: "smooth"})
-    await new Promise(resolve => setTimeout(resolve, 1000))
+    const sectionId = getViewSectionId(nextPageId)
+    currentPageId.set(nextPageId)
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
+    await new Promise((resolve) => setTimeout(resolve, 1000))
     isScrollable = true
   })
 
@@ -57,24 +57,23 @@ import Contact from "../components/Contact.astro"
     let nextPageId = currentPageId.get()
     // const currentScrollPosition =
     //   window.scrollY || document.documentElement.scrollTop;
-    if (e.key === "ArrowDown") {
-      console.log('down');
+    if (e.key === 'ArrowDown') {
+      console.log('down')
       if (nextPageId === 4) {
         nextPageId = 0
       } else {
         nextPageId++
       }
-    } else if (e.key === "ArrowUp") {
-      console.log('up');
+    } else if (e.key === 'ArrowUp') {
+      console.log('up')
       if (nextPageId === 0) {
         nextPageId = 4
       } else {
         nextPageId--
       }
-      
     }
-    const sectionId = getViewSectionId(nextPageId);
-    currentPageId.set(nextPageId);
-    document.getElementById(sectionId)?.scrollIntoView({behavior: "smooth"})
-  });
+    const sectionId = getViewSectionId(nextPageId)
+    currentPageId.set(nextPageId)
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
+  })
 </script>
