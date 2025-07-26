@@ -1,38 +1,38 @@
 ---
-import {Icon} from "astro-icon/components"
+import { Icon } from 'astro-icon/components'
 ---
 
 <div id="about" class="relative h-screen w-full flex items-center justify-center">
   <div class="flex flex-col w-2/5 gap-y-5">
-    <div class="text-white text-6xl">
+    <p class="text-white text-6xl leading-tight">
       Hi, I'm Takuya <br />
       Web Developer
-    </div>
-    <div class="text-white opacity-50 text-xl">
-      Front-End / Web Application Developer
-    </div>
+    </p>
+    <p class="text-white opacity-50 text-xl">Front-End / Web Application Developer</p>
   </div>
-  <div class="w-2/5 text-white leading-6">
-    Professionally connected with the web development industry. </br></br>
-    Problem solver, well-organised person, loyal employee with high attention to detail. </br>
-    Fan of Boxing, outdoor activities, video games, and coding of course. </br></br>
-    Interested in the entire frontend spectrum and working on ambitious projects with interesting people.
+  <div class="w-2/5 text-white leading-6 space-y-4">
+    <p>Professionally connected with the web development industry.</p>
+    <p>Problem solver, well-organised person, loyal employee with high attention to detail.</p>
+    <p>Fan of Boxing, outdoor activities, video games, and coding of course.</p>
+    <p>Interested in the entire frontend spectrum and working on ambitious projects with interesting people.</p>
   </div>
-  <div id="about-move-to-bottom"
-    class="flex items-center gap-x-1 absolute bottom-12 right-6 text-white hover:text-gray-300 cursor-pointer text-sm [writing-mode:vertical-lr]">
+  <div
+    id="about-move-to-bottom"
+    class="flex items-center gap-x-1 absolute bottom-12 right-6 text-white hover:text-gray-300 cursor-pointer text-sm [writing-mode:vertical-lr]"
+  >
     Scroll to Bottom <Icon class="inline" name="down-arrow" />
   </div>
 </div>
 
 <script>
-  import { PAGE_ID } from "../consts"
-  import { getViewSectionId } from "../modules"
-  import { currentPageId } from "../stores/pageId"
+  import { PAGE_ID } from '../consts'
+  import { getViewSectionId } from '../modules'
+  import { currentPageId } from '../stores/pageId'
 
-  document.getElementById("about-move-to-bottom")?.addEventListener("click", (e) => {
+  document.getElementById('about-move-to-bottom')?.addEventListener('click', (e) => {
     e.preventDefault()
     currentPageId.set(PAGE_ID.CONTACT)
     const sectionId = getViewSectionId(PAGE_ID.CONTACT)
-    document.getElementById(sectionId)?.scrollIntoView({behavior: "smooth"})
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
   })
 </script>
