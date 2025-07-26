@@ -1,18 +1,28 @@
 ---
-import {Icon} from "astro-icon/components"
-import { Image } from "astro:assets"
+import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets'
 ---
 
 <div id="projects" class="h-screen w-full flex items-center justify-center">
-    <div>
-        <Image src="/projects/project-2.svg" alt="project2" height={700} width={700} />
-    </div>
-    <div class="flex flex-col gap-y-4">
-        <div class="text-white opacity-30 text-xl">WEB GAME APPLICATION</div>
-        <div class="text-white text-6xl">Cards Deck</div>
-        <div class="text-white">Card Deck is a simple card deck that users can control each card on the board with.</div>
-        <div class="text-white">Built with: Next.js, Node, TypeScript, MongoDB, WebSocket.</div>
-        <div class="cursor-pointer text-white font-bold">View the code <Icon class="inline" name="right-arrow" /></div>
-        <div class="cursor-pointer text-yellow-300 hover:text-yellow-100 font-bold">Visit the app <Icon class="inline" name="right-arrow" /></div>
-    </div>
+  <div>
+    <Image src="/projects/project-2.svg" alt="project2" height={700} width={700} />
+  </div>
+
+  <div class="flex flex-col gap-y-4 text-white">
+    <p class="opacity-30 text-xl">WEB GAME APPLICATION</p>
+
+    <p class="text-6xl">Cards Deck</p>
+
+    <p>Card Deck is a simple card deck application where users can control each card individually on the board.</p>
+
+    <p>Built with: Next.js, Node, TypeScript, MongoDB, WebSocket.</p>
+
+    <p class="cursor-pointer font-bold">
+      View the code <Icon class="inline" name="right-arrow" />
+    </p>
+
+    <p class="cursor-pointer text-yellow-300 hover:text-yellow-100 font-bold">
+      Visit the app <Icon class="inline" name="right-arrow" />
+    </p>
+  </div>
 </div>
