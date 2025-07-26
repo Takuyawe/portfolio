@@ -1,40 +1,50 @@
 ---
-import {Icon} from "astro-icon/components"
+import { Icon } from 'astro-icon/components'
 ---
 
 <div id="projects" class="relative h-screen w-full flex flex-col items-center justify-center gap-y-6">
-    <div class="text-white text-6xl">Projects</div>
-    <div class="text-white w-1/2 text-center">I have built various different projects to fit different aspects of the client's business. If you want to see more examples of my work than the ones showcased in this site, please <a id="project-move-to-contact" class="cursor-pointer text-yellow-300 hover:text-yellow-100" href="">contact me!</a></div>
-    <a id="project-move-to-about" class="text-purple-600 hover:text-purple-400 font-cbold" href="">About me <Icon class="inline" name="right-arrow" /></a>
-    <div id="projects-move-to-bottom"
-        class="flex items-center gap-x-1 absolute bottom-12 right-6 text-white hover:text-gray-300 cursor-pointer text-sm [writing-mode:vertical-lr]">
-        Scroll to Bottom <Icon class="inline" name="down-arrow" />
+  <div class="text-white text-6xl">Projects</div>
+  <div class="text-white w-1/2 text-center">
+    I have built various different projects to fit different aspects of the client's business. If you want to see more
+    examples of my work than the ones showcased in this site, please <a
+      id="project-move-to-contact"
+      class="cursor-pointer text-yellow-300 hover:text-yellow-100"
+      href="">contact me!</a>
+  </div>
+  <a id="project-move-to-about" class="text-purple-600 hover:text-purple-400 font-cbold" href=""
+    >About me <Icon class="inline" name="right-arrow" /></a
+  >
+  <div
+    id="projects-move-to-bottom"
+    class="flex items-center gap-x-1 absolute bottom-12 right-6 text-white hover:text-gray-300 cursor-pointer text-sm [writing-mode:vertical-lr]"
+  >
+    Scroll to Bottom <Icon class="inline" name="down-arrow" />
   </div>
 </div>
 
 <script>
-    import { currentPageId } from '../stores/pageId';
-    import { getViewSectionId } from "../modules"
-    import { PAGE_ID } from "../consts"
+  import { currentPageId } from '../stores/pageId'
+  import { getViewSectionId } from '../modules'
+  import { PAGE_ID } from '../consts'
 
-    document.getElementById("project-move-to-contact")?.addEventListener("click", (e) => {
-        e.preventDefault()
-        currentPageId.set(PAGE_ID.CONTACT)
-        const sectionId = getViewSectionId(PAGE_ID.CONTACT)
-        document.getElementById(sectionId)?.scrollIntoView({behavior: "smooth"})
-    })
+  document.getElementById('project-move-to-contact')?.addEventListener('click', (e) => {
+    e.preventDefault()
+    currentPageId.set(PAGE_ID.CONTACT)
+    const sectionId = getViewSectionId(PAGE_ID.CONTACT)
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
+  })
 
-    document.getElementById("project-move-to-about")?.addEventListener("click", (e) => {
-        e.preventDefault()
-        currentPageId.set(PAGE_ID.ABOUT)
-        const sectionId = getViewSectionId(PAGE_ID.ABOUT)
-        document.getElementById(sectionId)?.scrollIntoView({behavior: "smooth"})
-    })
-    
-    document.getElementById("project-move-to-bottom")?.addEventListener("click", (e) => {
-        e.preventDefault()
-        currentPageId.set(PAGE_ID.CONTACT)
-        const sectionId = getViewSectionId(PAGE_ID.CONTACT)
-        document.getElementById(sectionId)?.scrollIntoView({behavior: "smooth"})
-    })
+  document.getElementById('project-move-to-about')?.addEventListener('click', (e) => {
+    e.preventDefault()
+    currentPageId.set(PAGE_ID.ABOUT)
+    const sectionId = getViewSectionId(PAGE_ID.ABOUT)
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
+  })
+
+  document.getElementById('project-move-to-bottom')?.addEventListener('click', (e) => {
+    e.preventDefault()
+    currentPageId.set(PAGE_ID.CONTACT)
+    const sectionId = getViewSectionId(PAGE_ID.CONTACT)
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
+  })
 </script>
