@@ -12,7 +12,8 @@ export default {
   prefix: '',
   theme: {
     screens: {
-      md: '680px'
+      md: '680px',
+      lg: '1024px'
     },
     container: {
       center: true,
