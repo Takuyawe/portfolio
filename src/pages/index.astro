@@ -31,7 +31,6 @@ import Contact from '../components/Contact.astro'
     if (!isScrollable) return
     isScrollable = false
     let nextPageId = currentPageId.get()
-    console.log(e.deltaY)
     if (e.deltaY > 0) {
       if (nextPageId === 4) {
         nextPageId = 0
