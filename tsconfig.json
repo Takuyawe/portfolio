@@ -4,9 +4,5 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react"
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.astro",
-  ]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.astro", "tailwind.config.mjs"]
 }
