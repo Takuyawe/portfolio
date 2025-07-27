@@ -48,7 +48,7 @@ import { Icon } from 'astro-icon/components'
 
   const domElement = document.getElementById('globe') || document.createElement('div')
 
-  const myGlobe = Globe()(domElement)
+  const myGlobe = new Globe(domElement)
     .width(width)
     .height(height)
     .globeImageUrl(GLOBE_OPTIONS.globeImageUrl)
