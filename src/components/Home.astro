@@ -5,16 +5,20 @@ import AnimationIconComponent from './AnimationIconComponent'
 ---
 
 <div id="home" class="h-screen w-full bg-gray-900 flex justify-center items-center">
-  <div class="flex flex-col w-full md:w-2/3 gap-y-5 pl-16 md:pl-24">
+  <div class="flex flex-col w-full items-start gap-y-10 md:gap-y-5 pl-16 md:pl-24 md:pr-20">
     <!-- TODO: add animation to each letter -->
-    <p class="text-5xl md:text-6xl font-bold text-white hover:animate-text-shadow-pop-tr">
+    <p class="text-5xl leading-snug md:leading-none font-bold text-white hover:animate-text-shadow-pop-tr">
       Front-End / <br /> Web Application <br /> Developer
     </p>
-    <p class="text-2xl md:text-xl text-white">
+    <p class="text-2xl md:text-lg leading-relaxed text-white">
       Building modern web apps with React, TypeScript, and Tailwind. I focus on clean UI, performance, and code
       maintainability — crafting smooth user experiences in close collaboration with designers and backend engineers.
     </p>
-    <a id="home-move-to-about" class="text-cyan-400 hover:text-cyan-300 text-2xl md:text-base font-bold" href="">
+    <a
+      id="home-move-to-about"
+      class="mt-5 md:mt-0 text-cyan-400 hover:text-cyan-300 text-2xl md:text-lg font-bold"
+      href=""
+    >
       About me <Icon class="inline" name="right-arrow" />
     </a>
   </div>
