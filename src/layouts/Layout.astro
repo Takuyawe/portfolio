@@ -26,21 +26,21 @@ const { title } = Astro.props
     <!-- on top of the globe -->
     <div
       id="layout-move-to-home"
-      class="z-10 fixed top-5 left-4 h-18 cursor-pointer text-white hover:text-gray-200 text-3xl md:text-2xl flex item-center justify-center gap-x-2"
+      class="z-10 fixed top-5 left-4 h-18 cursor-pointer text-white hover:text-gray-200 text-3xl md:text-4xl flex item-center justify-center gap-x-2"
     >
-      <AnimationIconComponent client:only="react" animationData={animationData} className="size-20 md:size-16" />
+      <AnimationIconComponent client:only="react" animationData={animationData} className="size-20 md:size-24" />
       <div class="self-center">WEB DEV</div>
     </div>
     <div
-      class="transition ease-in-out delay-50 hover:bg-gray-100 rounded-md fixed top-10 right-12 h-12 w-32 md:h-10 md:w-28 outline outline-1 outline-gray-100 flex items-center justify-center"
+      class="transition ease-in-out delay-50 hover:bg-gray-100 rounded-md fixed top-10 right-12 h-12 w-32 md:h-16 md:w-40 outline outline-1 outline-gray-100 flex items-center justify-center"
     >
-      <button id="layout-move-to-contact" class="text-gray-100 hover:text-gray-800 transition ease-in-out delay-50"
+      <button id="layout-move-to-contact" class="text-xl md:text-2xl text-gray-100 hover:text-gray-800 transition ease-in-out delay-50"
         >Contact</button
       >
     </div>
     <div class="z-10 fixed bottom-12 left-12 bg-white hover:bg-gray-200 rounded-full cursor-pointer">
       <a href="https://github.com/Takuyawe" target="_blank">
-        <Icon class="size-16 md:size-12" name="github" />
+        <Icon class="size-16 md:size-20" name="github" />
       </a>
     </div>
     <slot />
