@@ -2,16 +2,16 @@
 import { Icon } from 'astro-icon/components'
 ---
 
-<div id="contact" class="relative h-screen w-full flex items-center justify-center">
-  <div id="globe-container" class="w-2/3 h-screen">
+<div id="contact" class="relative h-screen w-full flex items-center justify-center gap-x-5">
+  <div id="globe-container" class="hidden md:block w-3/5 h-screen">
     <div id="globe" class="w-full h-full"></div>
   </div>
-  <div class="flex flex-col w-1/3 gap-y-4 text-white space-y-2">
-    <p>
+  <div class="flex flex-col gap-y-4 text-white space-y-2">
+    <p class="text-3xl md:text-4xl">
       What would you do if you had a software <br />
       expert available at your fingertips?
     </p>
-    <p>
+    <p class="text-2xl md:text-3xl">
       Want to start a new project? Or just say hey. You can also follow me on
       <a
         class="cursor-pointer text-yellow-300 hover:text-yellow-100"
@@ -21,7 +21,7 @@ import { Icon } from 'astro-icon/components'
         Linkedin
       </a>!
     </p>
-    <p class="text-3xl">tnemoto007@gmail.com</p>
+    <p class="text-3xl md:text-4xl">tnemoto007@gmail.com</p>
   </div>
   <div
     id="contact-move-to-top"
