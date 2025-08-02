@@ -22,7 +22,7 @@ const { title } = Astro.props
     <title>{title}</title>
   </head>
 
-  <body id="body" class="bg-gray-900 overflow-y-scroll md:overflow-hidden pl-20 pr-20 md:pl-40 md:pr-20">
+  <body id="body" class="bg-gray-900 overflow-y-scroll md:overflow-hidden pl-20 pr-10 md:pl-40 md:pr-20">
     <!-- on top of the globe -->
     <div
       id="layout-move-to-home"
@@ -34,11 +34,14 @@ const { title } = Astro.props
     <div
       class="transition ease-in-out delay-50 hover:bg-gray-100 rounded-md fixed top-7 right-8 md:top-10 md:right-12 h-8 w-24 md:h-16 md:w-40 outline outline-1 outline-gray-100 flex items-center justify-center"
     >
-      <button id="layout-move-to-contact" class="text-md md:text-2xl text-gray-100 hover:text-gray-800 transition ease-in-out delay-50"
-        >Contact</button
+      <button
+        id="layout-move-to-contact"
+        class="text-md md:text-2xl text-gray-100 hover:text-gray-800 transition ease-in-out delay-50">Contact</button
       >
     </div>
-    <div class="z-10 fixed bottom-6 left-4 md:bottom-12 md:left-12 bg-white hover:bg-gray-200 opacity-75 rounded-full cursor-pointer">
+    <div
+      class="z-10 fixed bottom-6 left-4 md:bottom-12 md:left-12 bg-white hover:bg-gray-200 opacity-75 rounded-full cursor-pointer"
+    >
       <a href="https://github.com/Takuyawe" target="_blank">
         <Icon class="size-12 md:size-20" name="github" />
       </a>
