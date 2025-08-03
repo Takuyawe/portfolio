@@ -22,10 +22,10 @@ const { title } = Astro.props
     <title>{title}</title>
   </head>
 
-  <body id="body" class="bg-gray-900 overflow-y-scroll md:overflow-hidden px-12 md:pl-40 md:pr-20">
+  <body id="body" class="overflow-y-scroll md:overflow-hidden px-12 md:pl-40 md:pr-20">
     <div
       id="layout-move-to-home"
-      class="z-10 fixed top-5 left-4 h-18 cursor-pointer text-white hover:text-gray-200 flex item-center justify-center gap-x-2"
+      class="z-10 fixed top-5 left-4 h-18 cursor-pointer hover:text-gray-200 flex item-center justify-center gap-x-2"
     >
       <AnimationIconComponent client:only="react" animationData={animationData} className="size-12 md:size-24" />
       <p class="text-lg md:text-4xl self-center">WEB DEV</p>
@@ -39,7 +39,7 @@ const { title } = Astro.props
       >
     </div>
     <div
-      class="z-10 fixed bottom-6 left-4 md:bottom-12 md:left-12 bg-white hover:bg-gray-200 opacity-75 rounded-full cursor-pointer"
+      class="z-10 fixed bottom-6 left-4 md:bottom-12 md:left-12 text-gray-800 bg-white hover:bg-gray-200 opacity-75 rounded-full cursor-pointer"
     >
       <a href="https://github.com/Takuyawe" target="_blank">
         <Icon class="size-10 md:size-20" name="github" />
