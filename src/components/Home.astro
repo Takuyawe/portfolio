@@ -13,9 +13,18 @@ import AnimationIconComponent from './AnimationIconComponent'
       Building modern web apps with React, TypeScript, and Tailwind. I focus on clean UI, performance, and code
       maintainability — crafting smooth user experiences in close collaboration with designers and backend engineers.
     </p>
-    <a id="home-move-to-about" class="mt-5 text-cyan-400 hover:text-cyan-300 text-xl md:text-3xl font-bold" href="">
-      About me <Icon class="inline" name="right-arrow" />
-    </a>
+    <div class="flex flex-col">
+      <a id="home-move-to-about" class="mt-5 text-cyan-400 hover:text-cyan-300 text-xl md:text-3xl font-bold" href="">
+        About me <Icon class="inline" name="right-arrow" />
+      </a>
+      <a
+        id="home-move-to-project"
+        class="mt-5 text-green-400 hover:text-green-300 text-xl md:text-3xl font-bold"
+        href=""
+      >
+        Go to projects <Icon class="inline" name="right-arrow" />
+      </a>
+    </div>
   </div>
   <div
     class="hidden md:block md:absolute bottom-12 left-1/2 transform -translate-x-1/2 size-16 bg-white rounded-lg opacity-40"
@@ -46,6 +55,13 @@ import AnimationIconComponent from './AnimationIconComponent'
     e.preventDefault()
     currentPageId.set(PAGE_ID.CONTACT)
     const sectionId = getViewSectionId(PAGE_ID.CONTACT)
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
+  })
+
+  document.getElementById('home-move-to-project')?.addEventListener('click', (e) => {
+    e.preventDefault()
+    currentPageId.set(PAGE_ID.PROJECTS)
+    const sectionId = getViewSectionId(PAGE_ID.PROJECTS)
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
   })
 </script>
