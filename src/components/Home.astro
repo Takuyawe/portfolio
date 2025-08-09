@@ -13,16 +13,22 @@ import AnimationIconComponent from './AnimationIconComponent'
       Building modern web apps with React, TypeScript, and Tailwind. I focus on clean UI, performance, and code
       maintainability — crafting smooth user experiences in close collaboration with designers and backend engineers.
     </p>
-    <div class="flex flex-col">
-      <a id="home-move-to-about" class="mt-5 text-cyan-400 hover:text-cyan-300 text-xl md:text-3xl font-bold" href="">
-        About me <Icon class="inline" name="right-arrow" />
+    <div class="mt-5 flex flex-col gap-y-5 md:gap-y-8">
+      <a
+        id="home-move-to-about"
+        class="flex items-center justify-between text-cyan-400 hover:text-cyan-300 text-xl md:text-3xl font-bold"
+        href=""
+      >
+        <span>About me</span>
+        <Icon class="ml-3" name="right-arrow" />
       </a>
       <a
         id="home-move-to-project"
-        class="mt-5 text-green-400 hover:text-green-300 text-xl md:text-3xl font-bold"
+        class="flex items-center justify-between text-green-400 hover:text-green-300 text-xl md:text-3xl font-bold"
         href=""
       >
-        Go to projects <Icon class="inline" name="right-arrow" />
+        <span>Go to projects</span>
+        <Icon class="ml-3" name="right-arrow" />
       </a>
     </div>
   </div>
