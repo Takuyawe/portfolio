@@ -53,7 +53,8 @@
       "axios": "^1.12.1",
       "esbuild@<=0.24.2": ">=0.25.0",
       "devalue": "^5.3.2",
-      "brace-expansion": "^2.0.2"
+      "brace-expansion": "^2.0.2",
+      "vite": "^7.1.5"
     }
   }
 }
